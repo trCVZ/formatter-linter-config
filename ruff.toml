@@ -1,0 +1,73 @@
+target-version = "py314"
+
+########################
+# PEP8
+########################
+line-length = 79
+indent-width = 4
+format.indent-style = "space"
+# PEP8: Should a Line Break Before or After a Binary Operator?
+lint.select = [
+    "E",  # PEP8 errors
+    "W",  # PEP8 warnings
+    "F",  # Pyflakes
+    "I",  # Import order (PEP8)
+    "UP", # Pyupgrade
+    "N",  # Naming conventions (PEP8)
+    # "D", # Docstring
+]
+lint.isort.combine-as-imports = true
+lint.isort.force-single-line = true
+format.quote-style = "double"
+format.skip-magic-trailing-comma = false
+lint.ignore = []
+
+# Docstring PEP8, le style Google est bon aussi
+lint.pydocstyle.convention = "pep257"
+
+########################
+# Ruff settings
+########################
+lint.fixable = ["ALL"]
+lint.unfixable = []
+lint.dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+format.line-ending = "auto"
+format.docstring-code-format = false
+format.docstring-code-line-length = "dynamic"
+
+########################
+# Default Ruff settings 
+########################
+# builtins = []
+# cache-dir = ".ruff_cache"
+# exclude = [
+#     ".bzr",
+#     ".direnv",
+#     ".eggs",
+#     ".git",
+#     ".git-rewrite",
+#     ".hg",
+#     ".mypy_cache",
+#     ".nox",
+#     ".pants.d",
+#     ".pytype",
+#     ".ruff_cache",
+#     ".svn",
+#     ".tox",
+#     ".venv",
+#     "__pypackages__",
+#     "_build",
+#     "buck-out",
+#     "dist",
+#     "node_modules",
+#     "venv",
+# ]
+# extend = ""
+# extend-exclude = []
+# fix = false
+# fix-only = false
+# force-exclude = false
+# include = ["*.py", "*.pyi", "*.pyw", "*.ipynb", "**/pyproject.toml"]
+# namespace-packages = []
+# output-format = "full"
